@@ -1,0 +1,87 @@
+/* The Laughing Waffle — cozy diner global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --bg: #fdf6e3;
+  --card: #fff8ec;
+  --card-edge: #f0e0c0;
+  --ink: #4a2f1b;
+  --ink-soft: #8a6a4d;
+  --maple: #b45f29;
+  --maple-dark: #8f4a1e;
+  --butter: #f2c14e;
+  --butter-soft: #fae3a7;
+  --berry: #7c5cbf;
+  --burnt: #3b2a20;
+  --shadow: 0 4px 14px rgba(122, 84, 40, 0.14);
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', 'Comic Sans MS', 'Segoe UI',
+    system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(242, 193, 78, 0.18), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(180, 95, 41, 0.1), transparent 45%),
+    var(--bg);
+  min-height: 100vh;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 2px solid var(--maple);
+  background: var(--butter);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 2px 0 var(--maple-dark);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--maple-dark);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--maple-dark);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+  opacity: 0.6;
+}
+
+a {
+  color: var(--maple);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
