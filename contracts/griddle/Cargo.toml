@@ -1,0 +1,18 @@
+[package]
+name = "griddle"
+description = "The Griddle: where batter becomes destiny (timing is everything)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+bakery-types = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+pantry = { workspace = true }
